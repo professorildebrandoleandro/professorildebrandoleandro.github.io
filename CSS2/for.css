@@ -1,0 +1,204 @@
+
+
+  
+/* RESET */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background-image: url("imagem/portuga.jpg");
+    background-position: center;
+    color:white;
+}
+
+/* ESCURECER FUNDO (IMPORTANTE) */
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.55);
+    z-index:-1;
+}
+
+/* CENTRALIZAÇÃO */
+.container{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-align:center;
+    width:100%;
+}
+
+/* NEON BONITO E LEGÍVEL */
+.neon{
+    font-size:70px;
+    color:#ffffff;
+
+    text-shadow:
+        0 0 3px #000,
+        0 0 8px #ff0000,
+        0 0 15px #
+       <!doctype html>
+<html lang="pt-br">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Buscar no Google | Marketing Digital e Educação Física</title>
+
+<link rel="icon" href="imagens/logogoogle.jpg">
+
+<style>
+
+/* RESET */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background-image: url("imagem/344435-svetik_1920x1080.jpg");
+    background-size: cover;
+    background-position: center;
+    color:white;
+}
+
+/* ESCURECER FUNDO */
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    z-index:-1;
+}
+
+/* CENTRAL */
+.container{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-align:center;
+    width:100%;
+}
+
+/* NEON VERMELHO BONITO (LEGÍVEL) */
+.neon{
+    font-size:70px;
+    color:#ffffff;
+
+    text-shadow:
+        0 0 2px #000,
+        0 0 6px #ff0000,
+        0 0 12px #ff0000,
+        0 0 20px #ff0000;
+
+    animation: piscar 2s infinite;
+}
+
+/* INPUT */
+input{
+    padding:12px;
+    width:300px;
+    font-size:18px;
+    border:none;
+}
+
+/* BOTÃO */
+button{
+    padding:12px 25px;
+    background:red;
+    color:white;
+    border:none;
+    font-size:18px;
+    cursor:pointer;
+}
+
+/* RODAPÉ SUPER LETREIRO */
+.rodape{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:80px;
+    background:black;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    border-top:3px solid #00ffff;
+}
+
+/* TEXTO LETREIRO GIGANTE */
+.marquee{
+    white-space:nowrap;
+    display:inline-block;
+
+    font-size:40px;
+    font-weight:bold;
+    padding-left:100%;
+
+    color:#ffffff;
+
+    text-shadow:
+        0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff,
+        0 0 10px #ffffff,
+        0 0 20px #ffffff;
+
+    animation: correr 15s linear infinite, piscarForte 1.5s infinite;
+}
+
+/* ANIMAÇÃO CORRER (MAIS FLUIDO) */
+@keyframes correr{
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-100%); }
+}
+
+/* PISCAR FORTE (BRANCO + AZUL) */
+@keyframes piscarForte{
+    0%,100%{
+        opacity:1;
+        text-shadow:
+            0 0 5px #00ffff,
+            0 0 10px #00ffff,
+            0 0 20px #00ffff,
+            0 0 40px #00ffff,
+            0 0 10px #ffffff,
+            0 0 25px #ffffff;
+    }
+    50%{
+        opacity:0.7;
+        text-shadow:
+            0 0 2px #00ffff,
+            0 0 5px #00ffff,
+            0 0 10px #ffffff;
+    }
+}
+/* ANIMAÇÕES */
+@keyframes piscar{
+    0%,100%{opacity:1;}
+    50%{opacity:0.85;}
+}
+
+@keyframes piscarAzul{
+    0%,100%{opacity:1;}
+    50%{opacity:0.6;}
+}
+
+@keyframes correr{
+    from{transform:translateX(0);}
+    to{transform:translateX(-100%);}
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+    .neon{font-size:40px;}
+    input{width:90%;}
+    .marquee{font-size:18px;}
+}
