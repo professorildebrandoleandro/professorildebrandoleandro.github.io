@@ -1,74 +1,61 @@
 
 
 
-body {
-    
-    background-image: url(imagens/sem.logo.jpg);
-      background-position: center 40%; /* Menos de 50% sobe a imagem */
-    background-size: cover;                
-    background-position: center;           
-    background-repeat: no-repeat;      
-    background-attachment: fixed;          
-    width: 100%; 
-     min-height: 500px;
-     width: 920px;    
-     max-width: 90%;  
-      margin: 0 auto; 
-      padding: 20px;  
-    background-color: #333; 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image: url("imagens/sem.logo.jpg");
+    background-position: center 40%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    margin: 0;
+    padding: 0; /* CORRIGIDO */
+
+    background-color: #333;
 }
 
+.container{
+    width: 95%;
+    max-width: 900px;
+    margin: 20px auto;
 
-.container {
-    width: 90%;                
-    max-width: 100px;         
-    margin: 0 auto;          
-    
-    
-    background-color: rgba(255, 255, 255, 0.9); 
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    min-height: 100vh;         
-}
 
+    overflow: hidden;
+}
+    
+    
+    
 .foto{
-    font-size: 12px;
     text-align: center;
+    font-size: 12px;
 }
 
 h1{
-
-
-color: rgb(248, 241, 241);
- border-bottom-style: solid;    
- border-bottom-width: 5px;      
-border-bottom-color: rgb(128, 206, 194);    
-text-align: center;
-background-color: rgb(96, 167, 177);
-font-size: 40px;
-
-}
-
-p{
-
+    color: rgb(248, 241, 241);
+    border-bottom: 5px solid rgb(128, 206, 194);
     text-align: center;
-    font-size: 23px;
+    background-color: rgb(96, 167, 177);
+    font-size: 28px;   /* antes 40px (muito grande) */
+    padding: 10px;
 }
+
 
 .p2{
-    text-decoration:none;  
+    text-decoration: none;
     font-size: 16px;
 }
 
 h2{
-
-color: rgb(255, 255, 255);
- border-bottom-style: solid;    
- border-bottom-width: 5px;      
-border-bottom-color: rgb(128, 206, 194);    
-text-align: left;
-background-color: rgb(96, 167, 177);
-font-size: 40px;
-
+    color: rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(128, 206, 194);
+    text-align: left;
+    background-color: rgb(96, 167, 177);
+    font-size: 24px;   /* corrigido (antes 40px) */
+    padding: 10px;
 }
 
 .p1{
@@ -81,138 +68,197 @@ font-size: 40px;
 }
 
 .p4{
-
     float: left;
- width: 27%;
- border:
- padding: 3px;
- margin: 0px 10px 10px 0;
-                margin-left: 0;
-               margin-top: 0px;
-               padding-left: 0px;
-               padding-top: 0px;
-               padding-bottom: 15px;
-               padding-right: 0px;
-              
+    width: 27%;
 
+    padding: 3px;
+    margin: 0px 10px 10px 0;
+    padding-bottom: 15px;
+}
 
-
-
+/* RESPONSIVO (ESSENCIAL) */
+@media (max-width:768px){
+    .p4{
+        float: none;
+        width: 100%;
+    }
 }
 
 .li{
-
     text-decoration: none;
     font-size: 16px;
+}
+ .central{
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
 
+    background-color: rgba(255,255,255,0.95);
+    text-align: center;
+}
+/* INPUTS AJUSTADOS */
+.central input,
+.central textarea{
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+/* MEDIA QUERY CORRIGIDO */
+@media only screen and (max-width: 700px){
+    .form-group {
+        width: 100%;
     }
 
-
-  .central {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-           
+    .meio{
+        font-size: 18px;  /* reduz no mobile */
+    }
 }
 
-.central {
-  padding-bottom: 4.5rem;
-  width: 50%;
-  display: grid;
-    
+/* TEXTO CENTRAL (corrigido) */
+.meio{
+    color: black;
+    text-align: center;
+    font-size: 22px;
 }
 
-.central{
-  background-color: ;
-  color: #000000;
-  border: none;
-  padding: 0.8rem;
-  font-size: 1rem;
-  font-family: Raleway, sans-serif;
-  cursor: pointer;
-  text-align: center;
-  width: 890px;
-    
-   
+.h{
+    color: green;
 }
 
-}
-
-@media only screen and (max-width: 700px) 
-  .form-group {
-    width: 100%;
-  }
-
-
-            .meio{
-                
-                color: black;
-                 text-align: center;
-                 font-size: 26px;
-            }
-            .h{
-                
-                color: green;
-            }
-            
-
+/* PARÁGRAFO */
 p {
-    font-size: 16px;       
-    color: #333333;        
-    line-height: 1.5;     
-    margin-bottom: 10px; 
-    text-align: right;  
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 .p6{
-
-text-decoration: none;
-text-align: left;
-font: size 16px;  ;
-
-
+    text-decoration: none;
+    text-align: left;
+    font-size: 16px;
 }
 
 .p8{
-
     text-align: center;
-    font-size: 20px;
-    font-weight: bolder;
-
+    font-size: 18px;
+    font-weight: bold;
 }
 
+/* BARRA (MARQUEE) */
 .lead{
-                
-            text-shadow: 4px 4px 4px blue;
-              height:100px;
-	color: white;
-	font-size: 20px;
-	text-align: center;
-	text-shadow: 4px 4px 4px blue;
-	background:  Navy blue;
-    line-height: 80px;
-    
-            }
-    
-            .rodape{
-                
-                height: 80px;
-	color: blue;
-	font-size: 14px;
-	text-align: center;
-	text-shadow: 2px 2px 2px black;
-	background: #6b6c68;
-    line-height: 80px;
-         
-    height: 80px;
-	color: blue;
-	font-size: 14px;
-	text-align: center;
-	text-shadow: 2px 2px 2px black;
-	background: #6b6c68;
-    line-height: 80px;
-               }
-                 
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
 
+    text-align: center;
+
+    /* EFEITO NEON REAL */
+    text-shadow:
+        0 0 5px #00f,
+        0 0 10px #00f,
+        0 0 20px #00f,
+        0 0 40px #00f;
+
+    background: #0a0a7a; /* azul escuro neon */
+    padding: 10px;
+}
+
+/* RESPONSIVO */
+@media (max-width:768px){
+    .lead{
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+    
+    .rodape{
+    max-width: 900px;
+    margin: 30px auto; /* centraliza igual container */
+
+    background: #2e2e2e;
+    padding: 15px;
+
+    text-align: center;
+}
+                 
+@media (max-width:768px){
+    .rodape{
+        font-size: 12px;
+        padding: 10px;
+    }
+}
  
+/* BLOQUEIA QUALQUER ESTOURO */
+*{
+    box-sizing: border-box;
+}
+
+/* CONTAINER FIRME */
+.container{
+    width: 95%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+/* CAMPOS RESPONSIVOS */
+.central input,
+.central textarea{
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+}
+
+/* REMOVE LARGURA FIXA DO TEXTAREA */
+textarea{
+    width: 100%;
+}
+
+/* BOTÃO */
+.central input[type="submit"]{
+    width: 100%;
+    cursor: pointer;
+}
+
+/* RODAPÉ CORRETO */
+.rodape{
+    width: 95%;
+    max-width: 900px;
+    margin: 20px auto;
+
+    background: #2e2e2e;
+    padding: 15px;
+
+    text-align: center;
+}
+
+/* TEXTO DO RODAPÉ */
+.lead{
+    display: block;
+    width: 100%;
+
+    color: #fff;
+    font-size: 16px;
+
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+    .central{
+        width: 100%;
+    }
+
+    .rodape{
+        width: 95%;
+    }
+}
