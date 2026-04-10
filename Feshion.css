@@ -1,0 +1,398 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY (DESKTOP FIXO) */
+body{
+    font-family: tahoma, arial, sans-serif;
+    color:black;
+
+    background-image: url("imagens/barcos.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    font-size:22px;
+
+    width:1000px;
+    margin:auto;
+}
+
+.banner-container{
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.banner-container img{
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+/* FAIXA ESCURA SOBRE A IMAGEM */
+.faixa-sobreposta{
+    position: absolute;
+
+    top: 50%;                 /* 🔥 MEIO EXATO */
+    left: 0;
+
+    transform: translateY(-50%); /* 🔥 centraliza vertical */
+
+    width: 100%;
+
+    background: rgba(10,15,28,0.9);
+
+    padding: 10px 0;
+
+    overflow: hidden;
+}
+
+/* TEXTO CORRENDO */
+.texto-animado{
+    display: inline-block;
+
+    white-space: nowrap;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    color: red;
+
+    animation: scrollTexto 12s linear infinite;
+
+    text-align: center;
+    width: 100%;
+}
+
+@keyframes scrollTexto{
+    from{ transform: translateX(100%); }
+    to{ transform: translateX(-100%); }
+}
+/* CONTAINER PRINCIPAL */
+#principal{
+    width:1024px;
+    margin:0 auto;
+}
+
+/* HEADER */
+.header-top{
+    height:50px;
+    background:#162028;
+    position:relative;
+}
+
+.logotipo{
+    margin:5px 0 0 135px;
+}
+
+.header-nav{
+    position:absolute;
+    top:0;
+    right:0;
+    height:100%;
+}
+
+.header-nav li{
+    list-style:none;
+    display:inline-block;
+    padding:13px;
+}
+
+.header-nav a{
+    color:cadetblue;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-size:12px;
+    letter-spacing:5px;
+}
+
+.header-nav a:hover{
+    color:wheat;
+}
+
+/* IMAGEM PRINCIPAL */
+#principal > img{
+    display:block;
+    width:100%;
+    max-width:1024px;
+
+    #principal > img{
+    margin:10px auto 0 auto; /* 🔥 remove espaço embaixo */
+}
+    border-radius:8px;
+}
+
+/* ========================= */
+/* 🔥 FAIXA ANIMADA (NOVO) */
+/* ========================= */
+
+.faixa-texto{
+    position: relative;
+
+    width: 100%;
+    max-width: 1024px;
+
+    margin: -60px auto 20px auto;  /* 🔥 PUXA PARA CIMA */
+
+    height: 40px;
+
+    background: rgba(0,0,0,0.7);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 6px;
+}
+.texto-animado{
+    white-space: nowrap;
+
+    color: red;
+    font-size: 14px;
+    letter-spacing: 3px;
+
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+@keyframes scrollTexto{
+    0%{
+        transform: translateX(50%);   /* 🔥 começa no meio */
+    }
+    50%{
+        transform: translateX(-50%);  /* 🔥 passa pelo centro */
+    }
+    100%{
+        transform: translateX(-150%);
+    }
+}
+
+/* PORTFOLIO */
+.portfolio{
+    padding:15px 50px;
+    text-align:center;
+    background-color:#003d52;
+}
+.faixa-texto{
+    display:flex;
+    justify-content:center;  /* 🔥 centraliza o bloco */
+    align-items:center;
+}
+
+.texto-animado{
+    white-space: nowrap;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    color: #ffffff;
+
+    animation: scrollTexto 12s linear infinite;
+
+    text-shadow:
+        0 0 5px #00c3ff,
+        0 0 10px #00c3ff,
+        0 0 20px #008cff,
+        0 0 40px #008cff;
+}
+.portfolio h1{
+    font-size:36px;
+    color:darkgray;
+}
+
+.portfolio p{
+    font-size:16px;
+    line-height:2;
+    color:wheat;
+}
+
+/* GALERIA */
+.gallery{
+    padding:0 100px 50px 100px;
+    overflow:hidden;
+}
+
+.gallery-card{
+    width:33%;
+    float:left;
+    text-align:center;
+    color:wheat;
+}
+
+/* ABOUT */
+.about{
+    background-color:#003d52;
+    padding:100px;
+    color:white;
+    background-image:url(../imagens/bg_detalhe.png);
+    background-repeat:no-repeat;
+    background-position:right bottom;
+}
+
+.about p{
+    width:70%;
+}
+
+/* CONTATO */
+#contact{
+    margin:30px 0;
+    text-align:center;
+    font-size:150%;
+    font-weight:bold;
+    text-shadow:4px 3px 5px red;
+    color:antiquewhite;
+}
+
+/* MAPA */
+.maps{
+    width:100%;
+    margin:10px 0;
+}
+
+.maps iframe{
+    width:100%;
+    height:300px;
+    border-radius:8px;
+}
+
+/* RODAPÉ */
+.rodape{
+    width:100%;
+    max-width:1024px;
+
+    margin:10px auto;
+
+    padding:15px;
+
+    background:#0a0f1c;
+    border-radius:8px;
+
+    text-align:center;
+
+    box-shadow:0 0 15px rgba(0,140,255,0.3);
+}
+
+.lead{
+    display:block;
+
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing:2px;
+
+    color:#fff;
+
+    text-align:center;
+
+    text-shadow:
+        0 0 5px #00c3ff,
+        0 0 10px #00c3ff,
+        0 0 20px #008cff,
+        0 0 40px #008cff;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVO */
+/* ========================= */
+
+@media (max-width:768px){
+
+    body{
+        width:100%;
+        margin:0;
+        font-size:16px;
+    }
+
+    #principal{
+        width:95%;
+        margin:10px auto;
+    }
+
+    .header-top{
+        height:auto;
+        text-align:center;
+    }
+
+    .logotipo{
+        margin:10px auto;
+        display:block;
+    }
+
+    .header-nav{
+        position:static;
+        text-align:center;
+    }
+
+    .header-nav li{
+        display:block;
+        padding:10px;
+    }
+
+    #principal > img{
+        width:100%;
+        margin:10px auto;
+    }
+
+    .portfolio{
+        padding:20px;
+    }
+
+    .portfolio h1{
+        font-size:22px;
+    }
+
+    .portfolio p{
+        font-size:14px;
+    }
+
+    .gallery{
+        padding:20px;
+    }
+
+    .gallery-card{
+        width:100%;
+        float:none;
+        margin-bottom:20px;
+    }
+
+    .about{
+        padding:30px 15px;
+    }
+
+    .about p{
+        width:100%;
+    }
+
+    .maps iframe{
+        height:220px;
+    }
+
+    #contact{
+        font-size:120%;
+    }
+
+    .rodape{
+        width:100%;
+        margin:10px auto;
+    }
+
+    .lead{
+        font-size:14px;
+    }
+}
